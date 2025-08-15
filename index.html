@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <link rel="shortcut icon" href="images/imgsbase/logo-pizzashow-positiva.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <title>Pizza Show</title>
+</head>
+<body>
+
+    <div class="loading-screen">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <img src="images/imgsbase/logo-pizzashow-negativa.png" alt="Logo da Loja" id="header-logo">
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <button id="carrinho-compra" aria-label="Carrinho de compras">
+               <i class="ti ti-shopping-cart"></i>
+               <span class="contador">0</span>
+            </button>
+        </div>
+    </header>
+
+    <section id="minhaModal" class="modal">
+  <div class="modal-container">
+    <button class="fechar">&times;</button>
+    <div class="modal-content">
+      <div class="produtos-section">
+        <h1>Lista de produtos</h1>
+        <div class="produtos-lista">
+          <div class="produto-item">Produto 1 <span class="produto-preco">R$ 19,90</span></div>
+          <div class="produto-item">Produto 2 <span class="produto-preco">R$ 24,90</span></div>
+          <div class="produto-item">Produto 3 <span class="produto-preco">R$ 15,50</span></div>
+          <div class="produto-item">Produto 4 <span class="produto-preco">R$ 32,00</span></div>
+        </div>
+      </div>
+      
+      <div class="checkout-section">
+        <h1>Finalizar pedido</h1>
+        <div class="checkout-container">
+          <form class="payment-form">
+            <h3>Forma de pagamento</h3>
+            <div class="payment-option">
+              <label>
+                <input type="radio" name="payment" value="pix" checked>
+                <i class="ti ti-parking-circle"></i> Pix
+              </label>
+            </div>
+            <div class="payment-option">
+              <label>
+                <input type="radio" name="payment" value="debito">
+                <i class="ti ti-credit-card"></i> Cartão de débito
+              </label>
+            </div>
+            <div class="payment-option">
+              <label>
+                <input type="radio" name="payment" value="dinheiro">
+                <i class="ti ti-cash-banknote"></i> Dinheiro
+              </label>
+            </div>
+            <button class="submit-btn">
+              Fazer pedido <i class="ti ti-brand-whatsapp"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="inicio" id="inicio">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="img-flutuando">
+                <img src="images/imgsbase/logo-pizzashow-negativa.png" alt="Pizza Show Logo" class="logo-animado">
+            </div>
+            <div class="frase-restaurante">
+                <h1 class="titulo-principal">Pizza Show</h1>
+                <p class="slogan">A melhor experiência em pizza da sua vida!</p>
+                <div class="cta-buttons">
+                    <a href="#produtos" class="btn btn-cardapio">Ver Cardápio</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sobre" id="sobre">
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <div class="sobre-content">
+                <div class="sobre-texto">
+                    <p>Fundada em 2010, a Pizza Show nasceu da paixão por pizza e do desejo de oferecer uma experiência gastronômica única. Nossas pizzas são preparadas com ingredientes selecionados e receitas exclusivas que conquistaram milhares de clientes.</p>
+                    <p>Nossa missão é transformar momentos comuns em experiências memoráveis através da combinação perfeita de sabores, texturas e aromas em cada pizza que servimos.</p>
+                    <ul class="diferenciais">
+                        <li><i class="ti ti-check"></i> Massa artesanal fermentada 48h</li>
+                        <li><i class="ti ti-check"></i> Ingredientes premium selecionados</li>
+                        <li><i class="ti ti-check"></i> Forno a lenha tradicional</li>
+                        <li><i class="ti ti-check"></i> Receitas exclusivas</li>
+                    </ul>
+                </div>
+                <div class="sobre-imagem">
+                    <img src="https://images.unsplash.com/photo-1590947132387-155cc02f3212?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Forno a lenha Pizza Show">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="produtos" id="produtos">
+        <div class="container">
+                <h2>Nosso Cardápio</h2>
+                <div class="menu-grid">
+                    <div class="card">
+                        <div class="card-badge">
+                            <i class="ti ti-star"></i>
+                            <i class="ti ti-star"></i>
+                            <i class="ti ti-star"></i>
+                            <i class="ti ti-star"></i>
+                            <i class="ti ti-star"></i>
+                        </div>
+                        <img src="images/imagenspizza/calabresa.jfif" class="card-img-top" alt="Pizza de Pepperoni">
+                        <div class="card-body">
+                            <h5 class="card-title">Pizza Calabresa</h5>
+                            <p class="card-text">Uma mistura deliciosa de calabresa, cebola roxa caramelizada, rúcula fresca e fatias de queijo brie derretido.</p>
+                            <div class="price">R$ 55,90</div>
+                            <div class="quantity-controls">
+                                <button class="btn-control btn-minus">-</button>
+                                <span class="quantity">1</span>
+                                <button class="btn-control btn-plus">+</button>
+                            </div>
+                            <div class="botoes">
+                                <button class="btn btn-primary add-to-cart">
+                                    <i class="ti ti-shopping-cart"></i> Adicionar
+                                </button>
+                                <a href="https://wa.me/5517981708668?text=Olá,%20gostaria%20de%20pedir%20uma%20pizza%20de%20calabresa!" 
+                                target="_blank" 
+                                class="btn btn-success">
+                                <i class="ti ti-brand-whatsapp"></i> WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-badge">
+                            <i class="ti ti-star"></i>
+                            <i class="ti ti-star"></i>
+                            <i class="ti ti-star"></i>
+                            <i class="ti ti-star"></i>
+                            <i class="ti ti-star"></i>
+                        </div>
+                        <img src="images/imagenspizza/margarida.jfif" class="card-img-top" alt="Pizza de Pepperoni">
+                        <div class="card-body">
+                            <h5 class="card-title">Pizza Margherita Especial</h5>
+                            <p class="card-text">Molho de tomate fresco, mozzarella de búfala, manjericão e um toque de azeite trufado para dar aquele sabor extra.</p>
+                            <div class="price">R$ 59,90</div>
+                            <div class="quantity-controls">
+                                <button class="btn-control btn-minus">-</button>
+                                <span class="quantity">1</span>
+                                <button class="btn-control btn-plus">+</button>
+                            </div>
+                            <div class="botoes">
+                                <button class="btn btn-primary add-to-cart">
+                                    <i class="ti ti-shopping-cart"></i> Adicionar
+                                </button>
+                                <a href="https://wa.me/5517981708668?text=Olá,%20gostaria%20de%20pedir%20uma%20pizza%20de%20Margherita%20Especial!" 
+                                target="_blank" 
+                                class="btn btn-success">
+                                <i class="ti ti-brand-whatsapp"></i> WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-badge">
+                            <i class="ti ti-star"></i>
+                            <i class="ti ti-star"></i>
+                            <i class="ti ti-star"></i>
+                            <i class="ti ti-star"></i>
+                            <i class="ti ti-star"></i>
+                        </div>
+                        <img src="images/imagenspizza/frangocombacon.jfif" class="card-img-top" alt="Pizza de Pepperoni">
+                        <div class="card-body">
+                            <h5 class="card-title">Pizza de Frango</h5>
+                            <p class="card-text">Frango desfiado temperado com alho e ervas, catupiry cremoso, bacon crocante e um toque de pimentão.</p>
+                            <div class="price">R$ 51,90</div>
+                            <div class="quantity-controls">
+                                <button class="btn-control btn-minus">-</button>
+                                <span class="quantity">1</span>
+                                <button class="btn-control btn-plus">+</button>
+                            </div>
+                            <div class="botoes">
+                                <button class="btn btn-primary add-to-cart">
+                                    <i class="ti ti-shopping-cart"></i> Adicionar
+                                </button>
+                                <a href="https://wa.me/5517981708668?text=Olá,%20gostaria%20de%20pedir%20uma%20pizza%20de%20Frango!" 
+                                target="_blank" 
+                                class="btn btn-success">
+                                <i class="ti ti-brand-whatsapp"></i> WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-badge">
+                            <i class="ti ti-star"></i>
+                            <i class="ti ti-star"></i>
+                            <i class="ti ti-star"></i>
+                            <i class="ti ti-star"></i>
+                            <i class="ti ti-star"></i>
+                        </div>
+                        <img src="images/imagenspizza/parma.jfif" class="card-img-top" alt="Pizza de Pepperoni">
+                        <div class="card-body">
+                            <h5 class="card-title">Pizza de Cogumelos e Parma</h5>
+                            <p class="card-text">Cogumelos frescos, presunto de parma, azeite de oliva, queijo parmesão e um toque de trufas.</p>
+                            <div class="price">R$ 60,90</div>
+                            <div class="quantity-controls">
+                                <button class="btn-control btn-minus">-</button>
+                                <span class="quantity">1</span>
+                                <button class="btn-control btn-plus">+</button>
+                            </div>
+                            <div class="botoes">
+                                <button class="btn btn-primary add-to-cart">
+                                    <i class="ti ti-shopping-cart"></i> Adicionar
+                                </button>
+                                <a href="https://wa.me/5517981708668?text=Olá,%20gostaria%20de%20pedir%20uma%20pizza%20de%20Cogumelos%20e%20Parma!" 
+                                target="_blank" 
+                                class="btn btn-success">
+                                <i class="ti ti-brand-whatsapp"></i> WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-badge">
+                            <i class="ti ti-star"></i>
+                            <i class="ti ti-star"></i>
+                            <i class="ti ti-star"></i>
+                            <i class="ti ti-star"></i>
+                            <i class="ti ti-star"></i>
+                        </div>
+                        <img src="images/imagenspizza/vegano.jfif" class="card-img-top" alt="Pizza de Pepperoni">
+                        <div class="card-body">
+                            <h5 class="card-title">Pizza Vegana de Abobrinha</h5>
+                            <p class="card-text">Pizza vegana com abobrinha, tomate seco, pesto e queijo vegetal </p>
+                            <div class="price">R$ 61,90</div>
+                            <div class="quantity-controls">
+                                <button class="btn-control btn-minus">-</button>
+                                <span class="quantity">1</span>
+                                <button class="btn-control btn-plus">+</button>
+                            </div>
+                            <div class="botoes">
+                                <button class="btn btn-primary add-to-cart">
+                                    <i class="ti ti-shopping-cart"></i> Adicionar
+                                </button>
+                                <a href="https://wa.me/5517981708668?text=Olá,%20gostaria%20de%20pedir%20uma%20pizza%20Vegana%20de%20abobrinha!" 
+                                target="_blank" 
+                                class="btn btn-success">
+                                <i class="ti ti-brand-whatsapp"></i> WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-badge">
+                            <i class="ti ti-star"></i>
+                            <i class="ti ti-star"></i>
+                            <i class="ti ti-star"></i>
+                            <i class="ti ti-star"></i>
+                            <i class="ti ti-star"></i>
+                        </div>
+                        <img src="images/imagenspizza/peperoni.webp" class="card-img-top" alt="Pizza de Pepperoni">
+                        <div class="card-body">
+                            <h5 class="card-title">Pizza de Pepperoni</h5>
+                            <p class="card-text">Molho de tomate caseiro, mussarela especial e pepperoni premium.</p>
+                            <div class="price">R$ 49,90</div>
+                            <div class="quantity-controls">
+                                <button class="btn-control btn-minus">-</button>
+                                <span class="quantity">1</span>
+                                <button class="btn-control btn-plus">+</button>
+                            </div>
+                            <div class="botoes">
+                                <button class="btn btn-primary add-to-cart">
+                                    <i class="ti ti-shopping-cart"></i> Adicionar
+                                </button>
+                                <a href="https://wa.me/5517981708668?text=Olá,%20gostaria%20de%20pedir%20uma%20pizza%20de%20Peperoni!" 
+                                target="_blank" 
+                                class="btn btn-success">
+                                <i class="ti ti-brand-whatsapp"></i> WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <section class="contato" id="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <div class="contact-container">
+                <div class="form-container">
+                    <div class="form-group">
+                        <label for="nomeInput" class="form-label">Nome</label>
+                        <div class="input-wrapper">
+                            <i class="ti ti-user"></i>
+                            <input type="text" class="form-control" id="nomeInput" placeholder="Digite seu nome">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="emailInput" class="form-label">Email</label>
+                        <div class="input-wrapper">
+                            <i class="ti ti-mail"></i>
+                            <input type="email" class="form-control" id="emailInput" placeholder="seu@email.com">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensagemTextarea" class="form-label">Mensagem</label>
+                        <div class="input-wrapper">
+                            <i class="ti ti-message"></i>
+                            <textarea class="form-control" id="mensagemTextarea" rows="4" placeholder="Escreva sua mensagem aqui..."></textarea>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="ti ti-send"></i> Enviar Mensagem
+                    </button>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="info-card">
+                        <i class="ti ti-map-pin"></i>
+                        <h3>Endereço</h3>
+                        <p>Rua das Pizzas, 123<br>Centro, São Paulo - SP</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <i class="ti ti-phone"></i>
+                        <h3>Telefone</h3>
+                        <p>(17) 98170-8668</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <i class="ti ti-clock"></i>
+                        <h3>Horário de Funcionamento</h3>
+                        <p>Terça a Domingo<br>18:00 - 23:30</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/imgsbase/logo-pizzashow-positiva.png" alt="Pizza Show Logo">
+                <p>A melhor experiência em pizza da sua vida!</p>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#produtos">Cardápio</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-social">
+                <h3>Siga-nos</h3>
+                <div class="redes-sociais">
+                    <a href="#" id="insta"><i class="ti ti-brand-instagram"></i></a>
+                    <a href="#" id="face"><i class="ti ti-brand-facebook"></i></a>
+                    <a href="#" id="x"><i class="ti ti-brand-x"></i></a>
+                </div>
+                
+                <div class="payment-methods">
+                    <h3>Formas de Pagamento</h3>
+                    <div class="payment-icons">
+                        <i class="ti ti-credit-card"></i>
+                        <i class="ti ti-brand-paypal"></i>
+                        <i class="ti ti-coins"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Pizza Show - Todos os direitos reservados</p>
+        </div>
+    </footer>
+    
+    <script src="scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/modal.js"></script>
+</body>
+</html>
