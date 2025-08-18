@@ -402,6 +402,10 @@ nav a:hover {
     font-size: 0.9rem;
 }
 
+.card-badge{
+    padding-left: 3%;
+}
+
 .price {
     font-weight: bold;
     color: #2a9d8f;
