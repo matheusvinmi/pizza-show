@@ -8,12 +8,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Efeito de header ao rolar
 window.addEventListener('scroll', function() {
     document.querySelector('header').classList.toggle('scrolled', window.scrollY > 50);
 });
 
-// Loading screen
 window.addEventListener('load', function() {
     const loadingScreen = document.querySelector('.loading-screen');
     setTimeout(() => {
@@ -59,23 +57,23 @@ const carrinho = {
         return;
     }
 
-    // Pega a forma de pagamento
+    // pega a forma de pagamento
     const pagamento = document.querySelector('input[name="payment"]:checked').value;
     
-    // Monta a mensagem básica
+    // monta a msg básica
     let msg = "Olá, quero pedir:\n\n";
     
-    // Adiciona os itens
+    // adiciona os itens
     this.itens.forEach(item => {
         msg += `${item.quantidade}x ${item.nome} - R$ ${item.preco.toFixed(2).replace('.', ',')}\n`;
     });
     
-    // Adiciona total e pagamento
+    // adiciona total e pagamento
     msg += `\nTotal: R$ ${this.calcularTotal().toFixed(2).replace('.', ',')}`;
     msg += `\nPagamento: ${pagamento}`;
     msg += `\n\nObrigado!`;
     
-    // Abre o WhatsApp
+    // Abre o zap
     window.location.href = `https://wa.me/5517981708668?text=${encodeURIComponent(msg)}`;
 }}
 

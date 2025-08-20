@@ -217,6 +217,99 @@ nav a:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+  @media (max-width: 1024px) {
+            .modal-container {
+                width: 90%;
+            }
+            
+            .produtos-section, 
+            .checkout-section {
+                padding: 20px;
+            }
+        }
+
+        /* Tablets menores e mobile landscape (768px) */
+        @media (max-width: 768px) {
+            .modal-content {
+                flex-direction: column;
+            }
+            
+            .produtos-section {
+                border-right: none;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 20px;
+            }
+            
+            .checkout-section {
+                padding-top: 20px;
+            }
+            
+            .produto-item {
+                font-size: 15px;
+            }
+            
+            .payment-option label {
+                font-size: 15px;
+            }
+        }
+
+        /* Mobile (até 480px) */
+        @media (max-width: 480px) {
+            .modal-container {
+                width: 95%;
+                max-height: 95vh;
+            }
+            
+            .produtos-section, 
+            .checkout-section {
+                padding: 15px;
+            }
+            
+            .produto-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+                padding: 15px 0;
+            }
+            
+            .payment-option {
+                margin: 12px 0;
+                padding: 8px;
+            }
+            
+            .payment-option label {
+                font-size: 14px;
+            }
+            
+            .submit-btn {
+                padding: 10px 20px;
+                font-size: 15px;
+            }
+            
+            .fechar {
+                top: 10px;
+                right: 10px;
+                height: 32px;
+                width: 32px;
+                font-size: 18px;
+            }
+        }
+
+        /* Mobile muito pequeno (até 320px) */
+        @media (max-width: 320px) {
+            .produtos-section h1,
+            .checkout-section h1 {
+                font-size: 1.3rem;
+            }
+            
+            .produto-item {
+                font-size: 14px;
+            }
+            
+            .payment-option label {
+                flex-wrap: wrap;
+            }}
+
 
 
 /* Seção Inicial */
