@@ -3,18 +3,18 @@ const modal = {
     element: document.getElementById('minhaModal'),
     produtosLista: document.querySelector('.produtos-lista'),
     checkoutSection: document.querySelector('.checkout-section'),
-    
+
     abrir() {
         this.atualizar();
         this.element.style.display = 'flex';
     },
-    
+
     fechar() {
         this.element.style.display = 'none';
     },
-    
+
     atualizar() {
-        this.produtosLista.innerHTML = carrinho.itens.length === 0 
+        this.produtosLista.innerHTML = carrinho.itens.length === 0
             ? '<p class="carrinho-vazio">Seu carrinho está vazio</p>'
             : carrinho.itens.map(item => `
                 <div class="produto-item">
@@ -27,7 +27,7 @@ const modal = {
                 <strong>Total:</strong>
                 <span class="total-preco">R$ ${carrinho.calcularTotal().toFixed(2).replace('.', ',')}</span>
             </div>`;
-        
+
         this.checkoutSection.style.display = carrinho.itens.length === 0 ? 'none' : 'block';
     }
 };
